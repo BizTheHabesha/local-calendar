@@ -43,6 +43,7 @@ $(function () {
   // current hour in 24-hour time?
   for(let timeBlock of timeBlockEls){
     var hourFromId = Number(timeBlock.id.replace(/hour-/g, ''))
+    $(timeBlock).children('textarea').val(JSON.parse(localStorage.getItem('memos'))[String($(timeBlock).attr('id').replace(/hour-/g, ''))])
     if(hourFromId == currentTime24){
       timeBlock.classList.add('present')
     }else if(hourFromId < currentTime24){
@@ -51,6 +52,7 @@ $(function () {
       timeBlock.classList.add('future');
     }
   }
+  $('.saveBtn').trigger('click');
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
