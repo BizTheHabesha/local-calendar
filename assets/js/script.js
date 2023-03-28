@@ -20,6 +20,10 @@ $(function () {
     16: '',
     17: '',
   };
+  // if local storage has not been initialized with a json, initialize it with an empty one.
+  if(!localStorage.getItem('memos')){
+    localStorage.setItem('memos', '{}')
+  }
   // get both the save button and save icon and allow them to access the same function on click
   $('.saveBtn').click(saveOnClick);
   $('.fas').click(saveOnClick);
