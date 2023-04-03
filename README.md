@@ -12,7 +12,7 @@ This is a local calendar that allows the user to save events for each hour of th
 N/A
 
 ## Usage
-The password generator is deployed [here](https://bizthehabesha.github.io/local-calendar/).
+The calendar is deployed [here](https://bizthehabesha.github.io/local-calendar/).
 
 ## Credits
 N/A
